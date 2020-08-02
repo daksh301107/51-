@@ -1,0 +1,31 @@
+.header{
+    background-color:red;
+display: flex;
+justify-content: space-between;
+}
+img {
+    border: 5px solid #555;
+  }
+.grid{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}s
+body{
+    margin:0px;
+    
+    background-color: #FFFFFF;
+}
+.grid img{
+    border:2px; solid :#FFFFFF;
+    border-radius:50px;
+}
+.game{
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    padding:30 px;
+    margin:25 px;
+    width:310 px;
+    font-family: fantasy;
+}
