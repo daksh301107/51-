@@ -114,14 +114,13 @@
   const ordered = [...PROJECTS].sort((a, b) => (a.id === FEATURED_ID ? -1 : b.id === FEATURED_ID ? 1 : 0));
   const match = p => (st.theme === "all" || p.theme === st.theme) &&
     (!st.q || st.q.split(/\s+/).every(w => [p.title, p.summary, p.partners, ...p.mentors, ...p.team].join(" ").toLowerCase().includes(w)));
-  const initials = s => s.split(/\s+/).filter(w => /^[A-Z]/.test(w)).slice(0, 2).map(w => w[0]).join("");
 
   const card = (p, feature) => {
     const t = THEMES[p.theme];
     return `
     <button class="pcard${feature ? " feature" : ""}" data-project="${esc(p.id)}">
       <div class="pcard-img">
-        <span class="initials" aria-hidden="true">${esc(initials(p.title))}</span>
+        <span class="catno">No. ${esc(String(p.id).padStart(2, "0"))}</span>
         ${p.image ? `<img src="${esc(p.image)}" alt="" loading="lazy" onerror="this.remove()" />` : ""}
         <span class="pcard-theme"><span class="dot" style="background:${t.color}"></span>${t.abbr}${p.year ? " · " + p.year : ""}</span>
       </div>
@@ -261,11 +260,6 @@
     location.href = `mailto:${to}?subject=${encodeURIComponent("[DIC website] " + d.topic)}&body=${encodeURIComponent(body)}`;
     fs.className = "fstatus ok"; fs.textContent = `Your email app should open with a message to ${to}.`;
   });
-
-  /* ---------- Reveal ---------- */
-  $$(".head, .about > *, .nc, .ex-panel, .step, .proto-col, .n, .tl-year, .ev, .people li, .contact > *").forEach(el => el.classList.add("rv"));
-  const rv = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); rv.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px" });
-  $$(".rv").forEach(el => rv.observe(el));
 
   $("#year").textContent = new Date().getFullYear();
 })();
