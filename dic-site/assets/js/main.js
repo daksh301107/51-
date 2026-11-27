@@ -214,7 +214,7 @@
   const drawer = $("#drawer"), dBody = $("#d-body"), dKicker = $("#d-kicker");
   let lastFocus;
   const fact = (k, v) => v ? `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>` : "";
-  const ticks = (h, a) => a && a.length ? `<h4>${h}</h4><ul class="ticks">${a.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
+  const ticks = (h, a) => a && a.length ? `<h3>${h}</h3><ul class="ticks">${a.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
   const openDrawer = (kicker, html) => {
     lastFocus = document.activeElement;
     dKicker.textContent = kicker; dBody.innerHTML = html; dBody.scrollTop = 0;
@@ -229,7 +229,7 @@
       <dl class="d-facts">${fact("Mentors", p.mentors.join(", "))}${fact("Partners", p.partners)}${fact("Started", p.year)}${fact("Theme", THEMES[p.theme].abbr)}</dl>
       ${ticks("Applications", p.applications)}
       ${ticks("Achievements", p.achievements)}
-      ${p.team.length ? `<h4>Research team</h4><ul class="chips">${p.team.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}`);
+      ${p.team.length ? `<h3>Research team</h3><ul class="chips">${p.team.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}`);
   };
   document.addEventListener("click", e => {
     const b = e.target.closest("[data-project]"); if (b) openProject(b.dataset.project);
@@ -242,7 +242,7 @@
         <h2 id="d-title" style="margin-top:14px">${esc(p.title)}</h2>
         <p class="d-lede">${esc(p.summary)}</p>
         <dl class="d-facts">${fact("Application / patent no.", p.number)}${fact("Filed", p.filed)}${fact("Granted", p.granted)}${fact("Theme", patentTheme(p.theme))}${fact("Inventors", p.inventors.join(", "))}</dl>
-        ${p.purpose ? `<h4>Purpose</h4><p class="d-lede">${esc(p.purpose)}</p>` : ""}
+        ${p.purpose ? `<h3>Purpose</h3><p class="d-lede">${esc(p.purpose)}</p>` : ""}
         ${ticks("Key features", p.features)}
         ${ticks("Achievements", p.achievements)}`);
     }
