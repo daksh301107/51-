@@ -7,7 +7,7 @@
   const esc = (s = "") => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const PROJECTS = window.DIC_PROJECTS || [];
+  let PROJECTS = window.DIC_PROJECTS || [];
   const PATENTS = window.DIC_PATENTS || [];
   const FEATURED_ID = "5"; // Bionic Prosthetic Arm: patented, grant-funded, clinically partnered
 
@@ -33,6 +33,8 @@
       text: "Advanced ceramics with optical transparency for optics, defence and electronics: polycrystalline transparent ceramics, YAG and yttria nanopowders, and thin-film coatings, developed with PEC."
     }
   };
+  // Ignore records whose theme is not one of the known themes, so lookups never hit a missing or inherited key.
+  PROJECTS = PROJECTS.filter(p => Object.prototype.hasOwnProperty.call(THEMES, p.theme));
   const byTheme = k => PROJECTS.filter(p => p.theme === k);
 
   /* ---------- Header ---------- */
@@ -121,8 +123,8 @@
     <button class="pcard${feature ? " feature" : ""}" data-project="${esc(p.id)}">
       <div class="pcard-img">
         <span class="catno">No. ${esc(String(p.id).padStart(2, "0"))}</span>
-        ${p.image ? `<img src="${esc(p.image)}" alt="" loading="lazy" onerror="this.remove()" />` : ""}
-        <span class="pcard-theme"><span class="dot" style="background:${t.color}"></span>${t.abbr}${p.year ? " · " + p.year : ""}</span>
+        ${p.image ? `<img src="${esc(p.image)}" alt="" loading="lazy" />` : ""}
+        <span class="pcard-theme"><span class="dot" style="background:${esc(t.color)}"></span>${esc(t.abbr)}${p.year ? " · " + esc(p.year) : ""}</span>
       </div>
       <div class="pcard-body">
         ${feature ? `<span class="feature-tag">Featured · Patent granted</span>` : ""}
@@ -151,6 +153,8 @@
   $("#pfilters").addEventListener("click", e => { const b = e.target.closest(".pill"); if (b) setFilter(b.dataset.f); });
   let qt; $("#q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => { st.q = e.target.value.trim().toLowerCase(); st.shown = PAGE; renderProjects(); }, 120); });
   more.addEventListener("click", () => { st.shown += PAGE; renderProjects(); });
+  // Hide a project image that fails to load (replaces an inline onerror handler so a strict CSP can be used).
+  document.addEventListener("error", e => { const t = e.target; if (t instanceof HTMLImageElement && t.closest(".pcard-img")) t.remove(); }, true);
   document.addEventListener("click", e => {
     const g = e.target.closest("[data-go]"); if (!g) return;
     e.preventDefault(); setFilter(g.dataset.go);
@@ -165,6 +169,8 @@
     const f = (p.filed || "").match(/(20\d\d)/); if (f) return f[1];
     const n = (p.number || "").match(/^(20\d\d)/); return n ? n[1] : "Undated";
   };
+  const STATUS_KEYS = ["granted", "published", "filed", "prototype"];
+  const statusKey = s => STATUS_KEYS.includes(String(s).toLowerCase()) ? String(s).toLowerCase() : "prototype";
   const ps = { status: "all" };
   const cnt = s => PATENTS.filter(p => p.status === s).length;
   $("#tfilters").innerHTML = [["all", "All patents", PATENTS.length], ...ORDER.filter(cnt).map(s => [s, s, cnt(s)])]
@@ -175,7 +181,7 @@
     const years = [...new Set(items.map(p => p.y))].sort((a, b) => (a === "Undated") - (b === "Undated") || b.localeCompare(a));
     $("#timeline").innerHTML = years.map(y => `
       <div class="tl-year">
-        <h3>${y}</h3>
+        <h3>${esc(y)}</h3>
         ${items.filter(p => p.y === y).map(p => `
           <button class="tl-item" data-patent="${p.i}">
             <span class="tl-thumb">${p.image ? `<img src="${esc(p.image)}" alt="" loading="lazy" />` : ""}</span>
@@ -184,7 +190,7 @@
               <small>${esc(patentTheme(p.theme))}</small>
               ${p.number ? `<small><code>${esc(p.number)}</code></small>` : ""}
             </span>
-            <span class="status st-${p.status.toLowerCase()}">${esc(p.status)}</span>
+            <span class="status st-${statusKey(p.status)}">${esc(p.status)}</span>
           </button>`).join("")}
       </div>`).join("");
   };
@@ -218,11 +224,11 @@
   document.addEventListener("click", e => {
     const b = e.target.closest("[data-project]"); if (b) openProject(b.dataset.project);
     const pt = e.target.closest("[data-patent]");
-    if (pt) {
-      const p = PATENTS[+pt.dataset.patent];
+    const p = pt && PATENTS[+pt.dataset.patent];
+    if (p) {
       openDrawer("Patent · " + p.status, `
         ${p.image ? `<div class="d-img"><img src="${esc(p.image)}" alt="" /></div>` : ""}
-        <span class="status st-${p.status.toLowerCase()}">${esc(p.status)}</span>
+        <span class="status st-${statusKey(p.status)}">${esc(p.status)}</span>
         <h2 id="d-title" style="margin-top:14px">${esc(p.title)}</h2>
         <p class="d-lede">${esc(p.summary)}</p>
         <dl class="d-facts">${fact("Application / patent no.", p.number)}${fact("Filed", p.filed)}${fact("Granted", p.granted)}${fact("Theme", patentTheme(p.theme))}${fact("Inventors", p.inventors.join(", "))}</dl>
@@ -240,7 +246,9 @@
   const lb = $("#lightbox"), lbImg = $("#lb-img");
   $("#gallery").addEventListener("click", e => {
     const b = e.target.closest(".shot"); if (!b) return;
-    lastFocus = b; lbImg.src = b.dataset.src; lbImg.alt = $("img", b).alt;
+    const src = b.dataset.src;
+    if (!/^assets\/img\/[\w.-]+$/.test(src)) return; // local gallery images only
+    lastFocus = b; lbImg.src = src; lbImg.alt = $("img", b).alt;
     lb.showModal(); document.body.style.overflow = "hidden";
   });
 
@@ -255,9 +263,11 @@
     });
     if (!ok) { fs.className = "fstatus err"; fs.textContent = "Please add your name, a valid email and a message."; return; }
     const d = Object.fromEntries(new FormData(form));
-    const to = d.topic === "Clinical partnership" ? "dic.mdart@gmail.com" : "dicuietpu@gmail.com";
+    const topics = $$('input[name="topic"]', form).map(i => i.value);
+    const topic = topics.includes(d.topic) ? d.topic : topics[0];
+    const to = topic === "Clinical partnership" ? "dic.mdart@gmail.com" : "dicuietpu@gmail.com";
     const body = `${d.message}\n\n${d.name}${d.org ? ", " + d.org : ""}\n${d.email}`;
-    location.href = `mailto:${to}?subject=${encodeURIComponent("[DIC website] " + d.topic)}&body=${encodeURIComponent(body)}`;
+    location.href = `mailto:${to}?subject=${encodeURIComponent("[DIC website] " + topic)}&body=${encodeURIComponent(body)}`;
     fs.className = "fstatus ok"; fs.textContent = `Your email app should open with a message to ${to}.`;
   });
 
