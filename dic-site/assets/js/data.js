@@ -353,7 +353,7 @@ window.DIC_PROJECTS = [
    "Ansh"
   ],
   "partners": "PGIMER, Chandigarh",
-  "image": "assets/img/goniometric_glove.png",
+  "image": "assets/img/goniometric_glove.webp",
   "summary": "IoT based device for assessing hand physiotherapy recovery. This device is made for assessing the finger joint movement of human hand. It is a remote device whose movement values are displayed through an app. It can measure angular joint movement as well as grip force of a patient. \nSpecifications:\nAn IoT based device which uses flexion sensors for measuring angular movement and grip sensor to measure grip force. \nUse of IoT for data storage and display through an app interface.",
   "applications": [
    "It can be used by the physiotherapists at their centers for evaluating the recovery rate of patients.",
@@ -908,7 +908,7 @@ window.DIC_PROJECTS = [
   ],
   "team": [],
   "partners": "",
-  "image": "assets/img/artificial_breather.png",
+  "image": "assets/img/artificial_breather.webp",
   "summary": "The project aims to develop a non-invasive respiratory support (NRS) device such as nasal continuous positive airway pressure (NCPAP), which will quickly improve respiratory distress symptoms. It delivers blended and humidified oxygen via short bi-nasal prongs or a nasal mask. The pressure in the circuit is maintained by immersing the distal end of the expiratory tubing in water.",
   "applications": [
    "Used to deliver continuous positive airway pressure (CPAP) to a spontaneously breathing newborn to maintain lung volumes during expiration."
@@ -926,7 +926,7 @@ window.DIC_PROJECTS = [
   ],
   "team": [],
   "partners": "",
-  "image": "assets/img/vertical_axis_wind_turbine.png",
+  "image": "assets/img/vertical_axis_wind_turbine.webp",
   "summary": "This project focuses on designing a portable windmill unit for battery charging, which is easy to install, disassemble, and relocate based on wind availability across seasons and locations. It features a hybrid vertical axis wind turbine combining Savonius and Darrieus rotors, optimized for a 1 kW electric load. Capable of operating at low wind speeds (4–5 m/s), it is omnidirectional and suitable for hilly terrain applications.",
   "applications": [
    "Portable, with assembly/disassembly capability. Excellent low wind self-start and high wind efficiency."
@@ -1143,7 +1143,7 @@ window.DIC_PROJECTS = [
    "Vivek Jindal"
   ],
   "partners": "PEC (Deemed to be University), Chandigarh",
-  "image": "assets/img/BBO_Transparent.png",
+  "image": "assets/img/BBO_Transparent.webp",
   "summary": "The thin film technology developed improves the efficiency of all solar-powered devices by enhancing absorption in the IR and visible spectrum. It is applied in photovoltaic and solar thermal systems. The BBO glass ceramics also have photocatalytic properties to neutralize harmful pollutants.\n\nTechnological Need:\nThe solution addresses inefficiencies in existing PV solar cells and enhances BBO glass use for disinfecting water via UV rays.\n\nHighlights Technology:\n• Improving efficiency of PV Cells\n• Easy scaling up of Technology\n• Uniformity of coatings",
   "applications": [
    "Enhances efficiency of solar-based systems using IR and visible spectrum.",
@@ -1164,7 +1164,7 @@ window.DIC_PROJECTS = [
    "Sushil Kumar"
   ],
   "partners": "PEC (Deemed to be University), Chandigarh",
-  "image": "assets/img/PolycrystallineTransparent.png",
+  "image": "assets/img/PolycrystallineTransparent.webp",
   "summary": "This technology utilizes Y₂O₃ and YAG due to their inherent transparency to allow light EM waves to pass through with minimal scattering. They also act as gain media for strategic applications like laser hosts.\n\nTechnological Need:\nConventional transparent optical materials suffer from poor mechanical strength and stability. This work addresses those issues through polycrystalline technology.\n\nChallenges:\nSingle crystal technology suffers from processing restrictions and brittleness. This project overcomes those limitations by enabling control over shape and large-scale synthesis.\n\nHighlights of Technology:\n• Cost Effectiveness & Large Scale Production\n• Feasibility of Shape Controlling\n• Better Mechanical Properties\n• High Purity",
   "applications": [
    "Laser host materials, strategic defense technologies, high-stability transparent materials with better mechanical strength."
@@ -1185,7 +1185,7 @@ window.DIC_PROJECTS = [
    "Pushpinder Singh"
   ],
   "partners": "PEC (Deemed to be University), Chandigarh",
-  "image": "assets/img/YAG_Yttria.png",
+  "image": "assets/img/YAG_Yttria.webp",
   "summary": "The project involves synthesis and characterization of nanopowders of Yttria (Y₂O₃) and Yttrium Aluminium Garnet (Y₃Al₅O₁₂ - YAG). \n\nYttria:\n• FTIR confirms Y–O and Y–O–Y bonding.\n• XRD analysis shows pure cubic Yttria with a crystallite size of 45 nm (JCPDS CARD 41-1105).\n• FESEM reveals pseudo-spherical morphology with minimal agglomeration.\n\nYAG:\n• FTIR confirms similar Y–O bonding.\n• XRD confirms pure cubic phase YAG with a crystallite size of 30 nm (JCPDS CARD 33-0040).\n• FESEM shows pseudo-spherical morphology with particle sizes ranging from 30–100 nm.",
   "applications": [
    "Used in laser host materials, optical ceramics, advanced electronics, and transparent armor. Nanopowders enhance performance in high-precision optical and electronic components."
@@ -1234,7 +1234,7 @@ window.DIC_PATENTS = [
    "Dr. Prashant Jindal",
    "Dr. Mamta Juneja"
   ],
-  "image": "assets/img/goniometric_glove.png",
+  "image": "assets/img/goniometric_glove.webp",
   "summary": "An IoT-based glove that measures finger joint angular motion and grip force to assist physiotherapy recovery evaluation.",
   "purpose": "This device is made for assessing the finger joint movement of the human hand. It is a remote device whose movement values are displayed through an app. It can measure angular joint movement as well as grip force of a patient.",
   "features": [
@@ -1287,7 +1287,7 @@ window.DIC_PATENTS = [
    "Dr. Mamta Juneja",
    "Dr. Prashant Jindal"
   ],
-  "image": "assets/img/method_custom_implant_dl.png",
+  "image": "assets/img/method_custom_implant_dl.webp",
   "summary": "A deep learning-based method (SCAI-Net) for generating patient-specific cranial implants from CT scans using advanced AI architectures, reducing time, cost, and dependency on manual CAD modeling.",
   "purpose": "To automate cranial implant design using deep learning, significantly improving efficiency and anatomical accuracy by bypassing manual CAD steps.",
   "features": [
@@ -1315,7 +1315,7 @@ window.DIC_PATENTS = [
    "Dr. Mamta Juneja",
    "Dr. Prashant Jindal"
   ],
-  "image": "assets/img/system_cranial_implant_cad.png",
+  "image": "assets/img/system_cranial_implant_cad.webp",
   "summary": "A system that combines CT imaging, CAD modeling, and finite element simulation to create patient-specific cranial implants, optimized for clinical fit and mechanical strength.",
   "purpose": "To reconstruct cranial bone using CT scan-based geometry, CAD modeling, and 3D printing validated through FEA to produce low-cost, clinically accurate implants.",
   "features": [
@@ -1471,7 +1471,7 @@ window.DIC_PATENTS = [
    "YP Verma",
    "Vinayak Agarwal"
   ],
-  "image": "assets/img/water_management_system.png",
+  "image": "assets/img/water_management_system.webp",
   "summary": "A timer-based water controlling system using a real-time clock (RTC) to minimize water wastage by automating the water supply through solenoid valves controlled via Arduino.",
   "purpose": "A timer based water controlling system to overcome the water wastage problem using real time clock (RTC).",
   "features": [
@@ -1495,7 +1495,7 @@ window.DIC_PATENTS = [
    "YP Verma",
    "Vinayak Aggarwal"
   ],
-  "image": "assets/img/artificial_breather.png",
+  "image": "assets/img/artificial_breather.webp",
   "summary": "A CPAP device developed to reduce the patient’s work of breathing by delivering non-invasive respiratory support for respiratory distress.",
   "purpose": "The project aims to develop non-invasive respiratory support (NRS), such as nasal continuous positive airway pressure (NCPAP), to quickly improve respiratory distress symptoms.",
   "features": [
@@ -1517,7 +1517,7 @@ window.DIC_PATENTS = [
    "YP Verma",
    "Vinayak Aggarwal"
   ],
-  "image": "assets/img/piezoelectric_shoes.png",
+  "image": "assets/img/piezoelectric_shoes.webp",
   "summary": "GPS-based Emergency Response System powered by piezoelectric transducers that transmit GPS coordinates through RF channel.",
   "purpose": "GPS-based Emergency Response System powered by Piezoelectric Transducers which transmits GPS coordinates through RF channel.",
   "features": [

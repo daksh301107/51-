@@ -19,7 +19,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 
   <script type="application/ld+json">
@@ -91,9 +91,9 @@
             <a href="#contact" class="btn btn-line">Partner with DIC <span aria-hidden="true">→</span></a>
           </div>
           <ul class="hero-proof">
-            <li><strong>47</strong><span>projects in the library</span></li>
-            <li><strong>8</strong><span>patents granted</span></li>
-            <li><strong>4</strong><span>research themes</span></li>
+            <li><strong data-stat="projects">47</strong><span>projects in the library</span></li>
+            <li><strong data-stat="granted">8</strong><span>patents granted</span></li>
+            <li><strong data-stat="themes">4</strong><span>research themes</span></li>
           </ul>
         </div>
 
@@ -110,7 +110,7 @@
             <img src="assets/img/bionic_prosthetic_arm.png" alt="3D-printed active transradial bionic prosthetic arm" />
             <figcaption>Bionic prosthetic arm · <b>Patent granted</b></figcaption>
           </figure>
-          <div class="b b-stat b-sage">
+          <div class="b b-stat b-wide">
             <span class="b-num" data-count="130">130</span>
             <span class="b-label">research publications</span>
           </div>
@@ -121,7 +121,7 @@
         <p class="wrap marquee-label">A national hub-and-spoke network</p>
         <div class="marquee-mask">
           <div class="marquee-track">
-            <img src="assets/img/alllogo.png" alt="UIET, Panjab University, PEC, HSJIDS, CSIR-CSIO and DIC logos" />
+            <img src="assets/img/alllogo.webp" alt="UIET, Panjab University, PEC, HSJIDS, CSIR-CSIO and DIC logos" />
           </div>
         </div>
       </div>
@@ -233,9 +233,9 @@
 
         <dl class="numbers">
           <div class="n n-blue"><dd data-count="5621">5,621</dd><dt>Students enrolled in DIC courses</dt></div>
-          <div class="n n-sage"><dd data-count="130">130</dd><dt>Publications</dt></div>
-          <div class="n n-sand"><dd data-count="14">14</dd><dt>Design patents filed, published or granted</dt></div>
-          <div class="n n-lilac"><dd data-count="30">30</dd><dt>New elective courses</dt></div>
+          <div class="n"><dd data-count="130">130</dd><dt>Publications</dt></div>
+          <div class="n"><dd data-stat="patents" data-count="12">12</dd><dt>Design patents filed, published or granted</dt></div>
+          <div class="n"><dd data-count="30">30</dd><dt>New elective courses</dt></div>
         </dl>
       </div>
     </section>
@@ -378,7 +378,7 @@
             <div class="f"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
           </div>
           <div class="f"><label for="f-org">Organisation <span class="opt">(optional)</span></label><input id="f-org" name="org" autocomplete="organization" /></div>
-          <div class="f"><label for="f-msg">How can we help?</label><textarea id="f-msg" name="message" rows="4" required></textarea></div>
+          <div class="f"><label for="f-msg">How can we help?</label><textarea id="f-msg" name="message" rows="4" maxlength="1000" required></textarea></div>
           <button class="btn btn-brand btn-block" type="submit">Send message</button>
           <p class="fstatus" id="fstatus" role="status"></p>
         </form>

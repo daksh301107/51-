@@ -53,6 +53,18 @@
   }), { rootMargin: "-45% 0px -50% 0px" });
   $$("main section[id]").forEach(s => spy.observe(s));
 
+  /* ---------- Numbers that come from the data ---------- */
+  const STATS = {
+    projects: PROJECTS.length,
+    themes: Object.keys(THEMES).length,
+    granted: PATENTS.filter(p => p.status === "Granted").length,
+    patents: PATENTS.filter(p => p.status !== "Prototype").length
+  };
+  $$("[data-stat]").forEach(el => {
+    el.textContent = STATS[el.dataset.stat];
+    if (el.dataset.count) el.dataset.count = STATS[el.dataset.stat];
+  });
+
   /* ---------- Count-up ---------- */
   const countObs = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
@@ -77,7 +89,6 @@
   const showTheme = k => {
     const t = THEMES[k], list = byTheme(k);
     const mentors = [...new Set(list.flatMap(p => p.mentors))];
-    const partners = [...new Set(list.flatMap(p => p.partners ? p.partners.split(/,|;/).map(s => s.trim()).filter(Boolean) : []))];
     const top = [...list].sort((a, b) => (b.achievements.length - a.achievements.length)).slice(0, 4);
     $$(".ex-tab", tabs).forEach(b => { const on = b.dataset.k === k; b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1; });
     panel.setAttribute("aria-labelledby", "tab-" + k);
@@ -89,7 +100,6 @@
         <div class="ex-meta">
           <span><strong>${list.length}</strong>projects</span>
           <span><strong>${mentors.length}</strong>faculty mentors</span>
-          ${partners.length ? `<span><strong>${partners.length}</strong>partner bodies</span>` : ""}
         </div>
         <p class="ex-list-title">Highlights</p>
         <ul class="ex-list">${top.map(p => `<li><button data-project="${esc(p.id)}"><span>${esc(p.title)}</span><span aria-hidden="true">↗</span></button></li>`).join("")}</ul>

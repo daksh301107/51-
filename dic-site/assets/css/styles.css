@@ -20,8 +20,6 @@
   --sage-soft: #E9F1E4;
   --sand: #9A5B2E;
   --sand-soft: #F5ECDF;
-  --lilac: #5A4CA8;
-  --lilac-soft: #EEEBF8;
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -120,8 +118,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .b-num { font: 400 clamp(2.4rem, 1.8rem + 1.6vw, 3.4rem)/1 var(--serif); letter-spacing: -.02em; }
 .b-label { font-size: .88rem; margin-top: 8px; }
 .b-blue { background: var(--blue-soft); } .b-blue .b-num { color: var(--brand-ink); } .b-blue .b-label { color: #3B4F86; }
-.b-sage { background: var(--soft); grid-column: 1 / -1; flex-direction: row; align-items: baseline; gap: 16px; min-height: 0; padding: 20px 24px; }
-.b-sage .b-num { color: var(--ink); } .b-sage .b-label { color: var(--muted); margin: 0; }
+.b-wide { background: var(--soft); grid-column: 1 / -1; flex-direction: row; align-items: baseline; gap: 16px; min-height: 0; padding: 20px 24px; }
+.b-wide .b-num { color: var(--ink); } .b-wide .b-label { color: var(--muted); margin: 0; }
 .b-object { display: flex; flex-direction: column; justify-content: space-between; padding: 16px 16px 16px; }
 .b-object img { width: 100%; height: 150px; object-fit: contain;  }
 .b-object figcaption { font-size: .85rem; color: var(--muted); margin-top: 12px; }
@@ -212,9 +210,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .n dd { margin: 0; font: 400 2.6rem/1 var(--serif); letter-spacing: -.02em; }
 .n dt { font-size: .88rem; color: var(--ink-2); }
 .n-blue { background: var(--blue-soft); } .n-blue dd { color: var(--brand-ink); }
-.n-sage { background: var(--soft); } .n-sage dd { color: var(--ink); }
-.n-sand { background: var(--soft); } .n-sand dd { color: var(--ink); }
-.n-lilac { background: var(--soft); } .n-lilac dd { color: var(--ink); }
 
 /* ---------- Projects ---------- */
 .search { position: relative; width: min(100%, 380px); }
