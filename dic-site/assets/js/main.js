@@ -209,6 +209,7 @@
     ps.status = b.dataset.s; $$("#tfilters .pill").forEach(x => x.setAttribute("aria-pressed", x === b)); renderPatents();
   });
   renderPatents();
+  $("#pnote").textContent = `${PATENTS.length} records: ` + ORDER.filter(cnt).map(s => `${cnt(s)} ${s.toLowerCase()}`).join(", ");
 
   /* ---------- Drawer ---------- */
   const drawer = $("#drawer"), dBody = $("#d-body"), dKicker = $("#d-kicker");
@@ -229,7 +230,8 @@
       <dl class="d-facts">${fact("Mentors", p.mentors.join(", "))}${fact("Partners", p.partners)}${fact("Started", p.year)}${fact("Theme", THEMES[p.theme].abbr)}</dl>
       ${ticks("Applications", p.applications)}
       ${ticks("Achievements", p.achievements)}
-      ${p.team.length ? `<h3>Research team</h3><ul class="chips">${p.team.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}`);
+      ${p.team.length ? `<h3>Research team</h3><ul class="chips">${p.team.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+      <button class="btn btn-brand d-cta" type="button" data-discuss="${esc(p.title)}">Discuss this project</button>`);
   };
   document.addEventListener("click", e => {
     const b = e.target.closest("[data-project]"); if (b) openProject(b.dataset.project);
@@ -244,8 +246,10 @@
         <dl class="d-facts">${fact("Application / patent no.", p.number)}${fact("Filed", p.filed)}${fact("Granted", p.granted)}${fact("Theme", patentTheme(p.theme))}${fact("Inventors", p.inventors.join(", "))}</dl>
         ${p.purpose ? `<h3>Purpose</h3><p class="d-lede">${esc(p.purpose)}</p>` : ""}
         ${ticks("Key features", p.features)}
-        ${ticks("Achievements", p.achievements)}`);
+        ${ticks("Achievements", p.achievements)}
+        <button class="btn btn-brand d-cta" type="button" data-discuss="${esc(p.title)}">Discuss this patent</button>`);
     }
+    const dc = e.target.closest("[data-discuss]"); if (dc) discuss(dc.dataset.discuss);
   });
   [drawer, $("#lightbox")].forEach(d => {
     d.addEventListener("click", e => { if (e.target === d || e.target.closest("[data-close]")) d.close(); });
@@ -263,23 +267,43 @@
   });
 
   /* ---------- Contact form (opens the visitor's email app) ---------- */
-  const form = $("#cform"), fs = $("#fstatus");
+  const form = $("#cform"), fs = $("#fstatus"), route = $("#route");
+  const recipient = t => t === "Clinical partnership" ? "dic.mdart@gmail.com" : "dicuietpu@gmail.com";
+  const updateRoute = () => { route.textContent = `Your message goes to ${recipient($('input[name="topic"]:checked', form).value)}`; };
+  form.addEventListener("change", e => e.target.name === "topic" && updateRoute());
+  updateRoute();
+
+  const ERRORS = { name: "Add your name", email: "Add a valid email address", message: "Write a short message" };
   form.addEventListener("submit", e => {
     e.preventDefault();
     let ok = true;
     $$("[required]", form).forEach(f => {
       const v = f.value.trim() && (f.type !== "email" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value));
-      f.closest(".f").classList.toggle("bad", !v); f.setAttribute("aria-invalid", !v); if (!v) ok = false;
+      const err = $("#err-" + f.name);
+      f.closest(".f").classList.toggle("bad", !v); f.setAttribute("aria-invalid", !v);
+      err.hidden = !!v; err.textContent = v ? "" : ERRORS[f.name];
+      if (!v) ok = false;
     });
-    if (!ok) { fs.className = "fstatus err"; fs.textContent = "Please add your name, a valid email and a message."; return; }
+    if (!ok) { fs.className = "fstatus err"; fs.textContent = "Please fix the fields marked below."; $('[aria-invalid="true"]', form).focus(); return; }
     const d = Object.fromEntries(new FormData(form));
     const topics = $$('input[name="topic"]', form).map(i => i.value);
     const topic = topics.includes(d.topic) ? d.topic : topics[0];
-    const to = topic === "Clinical partnership" ? "dic.mdart@gmail.com" : "dicuietpu@gmail.com";
+    const to = recipient(topic);
     const body = `${d.message}\n\n${d.name}${d.org ? ", " + d.org : ""}\n${d.email}`;
     location.href = `mailto:${to}?subject=${encodeURIComponent("[DIC website] " + topic)}&body=${encodeURIComponent(body)}`;
-    fs.className = "fstatus ok"; fs.textContent = `Your email app should open with a message to ${to}.`;
+    fs.className = "fstatus ok"; fs.textContent = `Your email app should open. If it does not, write to ${to} directly.`;
   });
+
+  // "Discuss this ..." buttons: pick the licensing topic, note what it is about, and jump to the form.
+  const discuss = about => {
+    $('input[name="topic"][value="Industry partnership / licensing"]', form).checked = true;
+    updateRoute();
+    const msg = $("#f-msg"); if (about && !msg.value) msg.value = `About: ${about}\n\n`;
+    lastFocus = null;
+    if (drawer.open) drawer.close();
+    $("#contact").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+    msg.focus({ preventScroll: true });
+  };
 
   $("#year").textContent = new Date().getFullYear();
 })();

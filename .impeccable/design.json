@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-28T06:36:43Z",
+  "generatedAt": "2026-11-28T06:44:34Z",
   "title": "Design System: Design Innovation Centre, Panjab University",
   "extensions": {
     "colorMeta": {
@@ -227,6 +227,21 @@
           "#F2AC7E",
           "#FED0B3",
           "#FFECDB"
+        ]
+      },
+      "theme-violet": {
+        "role": "tertiary",
+        "displayName": "Theme Violet",
+        "canonical": "oklch(48% 0.142 287)",
+        "tonalRamp": [
+          "#191630",
+          "#362D67",
+          "#5546A2",
+          "#766AC9",
+          "#998FF2",
+          "#B8AFFF",
+          "#D6D2FF",
+          "#EFEDFF"
         ]
       },
       "sand-wash": {
@@ -459,7 +474,7 @@
     "donts": [
       "Don't add gradients, glows, coloured shadows, blurred backdrops, emoji or decorative icons.",
       "Don't use uppercase tracked labels or italic for emphasis; emphasis in a headline is Working Blue colour only.",
-      "Don't introduce a second accent hue; sage and sand exist only for patent status chips.",
+      "Don't introduce a second accent hue; sage and sand appear only in patent status chips and the theme dots, violet only in its theme dot.",
       "Don't lift, scale or animate layout properties on hover; no looping motion.",
       "Don't add claims, numbers or testimonials the owner has not confirmed (see PRODUCT.md)."
     ]

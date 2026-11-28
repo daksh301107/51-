@@ -17,6 +17,7 @@ colors:
   sage-deep: "#2F5A25"
   sage-wash: "#E9F1E4"
   sand: "#9A5B2E"
+  theme-violet: "#5A4CA8"
   sand-wash: "#F5ECDF"
   error: "#C2410C"
 typography:
@@ -143,10 +144,11 @@ A warm neutral ramp does almost all the work; one blue and two status colours do
 - **Working Blue** (#2453C4): the single accent. Primary buttons, the selected state, the focus ring and ring-shadow on fields, and colour emphasis inside headlines. Hover and pressed deepen to **Deep Working Blue** (#1B3F99). **Blue Wash** (#E8EEFB) tints the one accent stat tile, the hub card in the network, and date badges.
 
 ### Secondary
-- **Trial Sage** (#4F7F42) with **Sage Wash** (#E9F1E4) and **Deep Sage** (#2F5A25) text: the Granted chip only.
+- **Trial Sage** (#4F7F42) with **Sage Wash** (#E9F1E4) and **Deep Sage** (#2F5A25) text: the Granted chip, and the Energy Harvesting theme dot.
 
 ### Tertiary
-- **Filed Sand** (#9A5B2E) with **Sand Wash** (#F5ECDF): the Filed chip only.
+- **Filed Sand** (#9A5B2E) with **Sand Wash** (#F5ECDF): the Filed chip, and the Transparent Ceramics theme dot.
+- **Theme Violet** (#5A4CA8): the AI Enabled Technologies theme dot only. The four theme dots (Working Blue, Theme Violet, Trial Sage, Filed Sand) are a small series palette that tells research themes apart in the filters and card badges.
 
 ### Neutral
 - **Warm Paper** (#FAF9F6): the page.
@@ -252,6 +254,6 @@ A project card whose image is missing or still loading shows its catalogue numbe
 ### Don't:
 - **Don't** add gradients, glows, coloured shadows, blurred backdrops, emoji or decorative icons.
 - **Don't** use uppercase tracked labels or italic for emphasis; emphasis in a headline is Working Blue colour only.
-- **Don't** introduce a second accent hue; sage and sand exist only for patent status chips.
+- **Don't** introduce a second accent hue; sage and sand appear only in patent status chips and the theme dots, violet only in its theme dot.
 - **Don't** lift, scale or animate layout properties on hover; no looping motion.
 - **Don't** add claims, numbers or testimonials the owner has not confirmed (see PRODUCT.md).

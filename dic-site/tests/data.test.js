@@ -51,3 +51,9 @@ test('the fallback numbers typed in index.html match the data', () => {
 test('the contact message box has a length limit so the mailto: link stays short', () => {
   assert.match(html, /<textarea[^>]*name="message"[^>]*maxlength="\d+"/);
 });
+
+test('the contact form has a message under each required field and shows where it goes', () => {
+  for (const f of ['name', 'email', 'message']) assert.match(html, new RegExp(`aria-describedby="err-${f}"[^>]*required[\\s\\S]*?id="err-${f}"`));
+  assert.match(html, /id="route"/);
+  assert.match(html, /data-discuss=""/);
+});

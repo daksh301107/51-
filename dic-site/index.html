@@ -41,7 +41,6 @@
   <!-- Announcement -->
   <div class="announce">
     <div class="wrap announce-inner">
-      <span class="announce-tag">New</span>
       <p>International Workshop on AI &amp; Additive Manufacturing for Medical Prosthetics · 17–19 July 2025</p>
       <a href="#events">See highlights →</a>
     </div>
@@ -87,8 +86,8 @@
             trialled technology, together with CSIR-CSIO, PEC, HSJIDS, PGIMER and GMCH-32.
           </p>
           <div class="hero-cta">
-            <a href="#projects" class="btn btn-brand">Explore our work</a>
-            <a href="#contact" class="btn btn-line">Partner with DIC <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="btn btn-brand">Partner with DIC <span aria-hidden="true">→</span></a>
+            <a href="#projects" class="btn btn-line">Explore our work</a>
           </div>
           <ul class="hero-proof">
             <li><strong data-stat="projects">47</strong><span>projects in the library</span></li>
@@ -200,7 +199,7 @@
             <span class="step-no">03</span>
             <h3>Clinical trials</h3>
             <p class="step-big">11</p>
-            <p>prototypes trialled with hospital partners</p>
+            <p>prototypes trialled with hospital partners. <a href="#trials">See the list</a></p>
           </li>
           <li class="step">
             <span class="step-no">04</span>
@@ -217,7 +216,7 @@
         </ol>
 
         <div class="proto">
-          <div class="proto-col">
+          <div class="proto-col" id="trials">
             <h3><span>11</span> In clinical trials</h3>
             <ul class="chips"><li>Dental aligner</li><li>Dental guide</li><li>Cranioplasty</li><li>Maxillofacial correction</li><li>Pupilometer</li><li>Hip joint replacement</li><li>Mandible correction</li><li>Tooth implant</li><li>Bite force device</li><li>Finger sensing glove</li><li>Dentine grinder</li></ul>
           </div>
@@ -232,9 +231,7 @@
         </div>
 
         <dl class="numbers">
-          <div class="n n-blue"><dd data-count="5621">5,621</dd><dt>Students enrolled in DIC courses</dt></div>
-          <div class="n"><dd data-count="130">130</dd><dt>Publications</dt></div>
-          <div class="n"><dd data-stat="patents" data-count="12">12</dd><dt>Design patents filed, published or granted</dt></div>
+          <div class="n n-blue"><dd data-stat="patents" data-count="12">12</dd><dt>Design patents filed, published or granted</dt></div>
           <div class="n"><dd data-count="30">30</dd><dt>New elective courses</dt></div>
         </dl>
       </div>
@@ -258,6 +255,7 @@
         <p class="count" id="pcount" aria-live="polite"></p>
         <div class="pgrid" id="pgrid"></div>
         <div class="more-wrap"><button class="btn btn-line" id="pmore" hidden>Load more</button></div>
+        <p class="cta-line"><span>Have a technology, a trial or a licence in mind?</span> <button class="btn btn-brand btn-sm" type="button" data-discuss="">Start a conversation</button></p>
       </div>
     </section>
 
@@ -268,6 +266,7 @@
           <p class="kicker">Intellectual property</p>
           <h2 id="patents-title">Patents, year by year</h2>
           <p class="muted">Indian patents filed by DIC investigators and students since 2017. Select one for details.</p>
+          <p class="muted" id="pnote"></p>
           <div class="pills pills-col" role="toolbar" aria-label="Filter by status" id="tfilters"></div>
         </aside>
         <div class="timeline" id="timeline"></div>
@@ -327,7 +326,7 @@
       <div class="wrap">
         <div class="head head-split">
           <div>
-            <p class="kicker">Functionaries</p>
+            <p class="kicker">Leadership and investigators</p>
             <h2 id="people-title">The people behind the work</h2>
           </div>
           <p class="head-note">Faculty and scientists from across the hub and spokes who mentor every DIC project.</p>
@@ -373,12 +372,13 @@
             <label><input type="radio" name="topic" value="Clinical partnership" /><span>Clinical partnership</span></label>
             <label><input type="radio" name="topic" value="Internship" /><span>Internship</span></label>
           </fieldset>
+          <p class="route" id="route"></p>
           <div class="frow">
-            <div class="f"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required /></div>
-            <div class="f"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
+            <div class="f"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" aria-describedby="err-name" required /><small class="ferr" id="err-name" hidden></small></div>
+            <div class="f"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" aria-describedby="err-email" required /><small class="ferr" id="err-email" hidden></small></div>
           </div>
           <div class="f"><label for="f-org">Organisation <span class="opt">(optional)</span></label><input id="f-org" name="org" autocomplete="organization" /></div>
-          <div class="f"><label for="f-msg">How can we help?</label><textarea id="f-msg" name="message" rows="4" maxlength="1000" required></textarea></div>
+          <div class="f"><label for="f-msg">How can we help?</label><textarea id="f-msg" name="message" rows="4" maxlength="1000" aria-describedby="err-message" required></textarea><small class="ferr" id="err-message" hidden></small></div>
           <button class="btn btn-brand btn-block" type="submit">Send message</button>
           <p class="fstatus" id="fstatus" role="status"></p>
         </form>
