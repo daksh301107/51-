@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-28T06:36:43Z",
+  "title": "Design System: Design Innovation Centre, Panjab University",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "oklch(98% 0.004 91)",
+        "tonalRamp": [
+          "#1B1B1A",
+          "#383836",
+          "#595855",
+          "#7B7A78",
+          "#9F9E9B",
+          "#BEBEBB",
+          "#DBDBD9",
+          "#F2F2F1"
+        ]
+      },
+      "white-card": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "canonical": "oklch(100% 0.000 90)",
+        "tonalRamp": [
+          "#1B1B1B",
+          "#383838",
+          "#585858",
+          "#7A7A7A",
+          "#9E9E9E",
+          "#BEBEBE",
+          "#DBDBDB",
+          "#F2F2F2"
+        ]
+      },
+      "soft-paper": {
+        "role": "neutral",
+        "displayName": "Soft Paper",
+        "canonical": "oklch(96% 0.007 89)",
+        "tonalRamp": [
+          "#1B1A19",
+          "#393835",
+          "#5A5854",
+          "#7C7A76",
+          "#A09E9A",
+          "#BFBDB9",
+          "#DCDBD7",
+          "#F2F2F0"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Bench Ink",
+        "canonical": "oklch(21% 0.010 268)",
+        "tonalRamp": [
+          "#1A1B1C",
+          "#36383C",
+          "#55585E",
+          "#787A81",
+          "#9C9EA5",
+          "#BBBEC5",
+          "#D9DBDF",
+          "#F1F2F4"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "oklch(37% 0.021 263)",
+        "tonalRamp": [
+          "#191B1E",
+          "#34383F",
+          "#525864",
+          "#747B87",
+          "#989FAC",
+          "#B7BECB",
+          "#D6DBE4",
+          "#EFF2F7"
+        ]
+      },
+      "muted-slate": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "oklch(50% 0.024 262)",
+        "tonalRamp": [
+          "#181B1F",
+          "#333841",
+          "#515866",
+          "#727B89",
+          "#969FAE",
+          "#B5BECE",
+          "#D5DBE5",
+          "#EEF2F8"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(92% 0.012 85)",
+        "tonalRamp": [
+          "#1B1A19",
+          "#3A3833",
+          "#5B5851",
+          "#7D7A73",
+          "#A29E96",
+          "#C1BDB5",
+          "#DDDAD5",
+          "#F3F2EF"
+        ]
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "oklch(87% 0.016 86)",
+        "tonalRamp": [
+          "#1C1A18",
+          "#3A3832",
+          "#5C584E",
+          "#7E7A70",
+          "#A39E93",
+          "#C2BDB2",
+          "#DEDAD3",
+          "#F3F2ED"
+        ]
+      },
+      "working-blue": {
+        "role": "primary",
+        "displayName": "Working Blue",
+        "canonical": "oklch(48% 0.184 264)",
+        "tonalRamp": [
+          "#0B1937",
+          "#143178",
+          "#1E4CBD",
+          "#3F72E6",
+          "#6198FF",
+          "#7FB9FF",
+          "#B3DAFF",
+          "#DBF2FF"
+        ]
+      },
+      "working-blue-deep": {
+        "role": "primary",
+        "displayName": "Deep Working Blue",
+        "canonical": "oklch(40% 0.153 264)",
+        "tonalRamp": [
+          "#0E1933",
+          "#1B346D",
+          "#2A51AC",
+          "#4B75D4",
+          "#6D9BFD",
+          "#8BBBFF",
+          "#BADBFF",
+          "#DFF2FF"
+        ]
+      },
+      "blue-wash": {
+        "role": "primary",
+        "displayName": "Blue Wash",
+        "canonical": "oklch(95% 0.019 266)",
+        "tonalRamp": [
+          "#191B1E",
+          "#35383F",
+          "#535863",
+          "#757A86",
+          "#999EAA",
+          "#B8BECA",
+          "#D7DBE3",
+          "#F0F2F6"
+        ]
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Trial Sage",
+        "canonical": "oklch(55% 0.104 139)",
+        "tonalRamp": [
+          "#121F0E",
+          "#23411B",
+          "#376629",
+          "#59894C",
+          "#7CAE6F",
+          "#9BCE8D",
+          "#C5E6BC",
+          "#E5F8E0"
+        ]
+      },
+      "sage-deep": {
+        "role": "secondary",
+        "displayName": "Deep Sage",
+        "canonical": "oklch(42% 0.095 140)",
+        "tonalRamp": [
+          "#121E10",
+          "#25401E",
+          "#39652F",
+          "#5B8851",
+          "#7FAD74",
+          "#9DCD93",
+          "#C6E5BF",
+          "#E6F8E2"
+        ]
+      },
+      "sage-wash": {
+        "role": "secondary",
+        "displayName": "Sage Wash",
+        "canonical": "oklch(95% 0.019 133)",
+        "tonalRamp": [
+          "#191B18",
+          "#353933",
+          "#545A50",
+          "#767D71",
+          "#9AA195",
+          "#B9C1B4",
+          "#D8DDD4",
+          "#F0F3EE"
+        ]
+      },
+      "sand": {
+        "role": "tertiary",
+        "displayName": "Filed Sand",
+        "canonical": "oklch(53% 0.102 54)",
+        "tonalRamp": [
+          "#27160A",
+          "#532D10",
+          "#834616",
+          "#A9683C",
+          "#D08D60",
+          "#F2AC7E",
+          "#FED0B3",
+          "#FFECDB"
+        ]
+      },
+      "sand-wash": {
+        "role": "tertiary",
+        "displayName": "Sand Wash",
+        "canonical": "oklch(95% 0.020 77)",
+        "tonalRamp": [
+          "#1C1A17",
+          "#3C3730",
+          "#5E574C",
+          "#81796D",
+          "#A59D91",
+          "#C5BCB0",
+          "#DFDAD2",
+          "#F4F1ED"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Form Error",
+        "canonical": "oklch(55% 0.174 38)",
+        "tonalRamp": [
+          "#310E04",
+          "#671700",
+          "#A21F00",
+          "#CB4A1A",
+          "#F67145",
+          "#FF9165",
+          "#FFC1A5",
+          "#FFE4D4"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings and big stat figures."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and column headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs, capped near 65 to 75 characters."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Kickers, roles and meta in sentence case."
+      },
+      "tag": {
+        "displayName": "Bench Tag",
+        "purpose": "Catalogue and patent numbers in IBM Plex Mono."
+      }
+    },
+    "shadows": [
+      {
+        "name": "selected-tab",
+        "value": "0 1px 2px rgba(22,24,29,.04), 0 8px 24px -12px rgba(22,24,29,.12)",
+        "purpose": "The active theme tab."
+      },
+      {
+        "name": "panel",
+        "value": "0 24px 60px -24px rgba(22,24,29,.25)",
+        "purpose": "Contact form and detail drawer."
+      },
+      {
+        "name": "button-edge",
+        "value": "0 1px 2px rgba(22,24,29,.16)",
+        "purpose": "Neutral edge under the primary button."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(.2,.7,.2,1)",
+        "purpose": "Default easing for state changes and the entrance."
+      },
+      {
+        "name": "state-change",
+        "value": "200ms",
+        "purpose": "Colour, background and border transitions."
+      },
+      {
+        "name": "press",
+        "value": "100ms",
+        "purpose": "Button press scale to 0.98."
+      },
+      {
+        "name": "entrance",
+        "value": "500ms",
+        "purpose": "One fade and 8px rise on the hero at load."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "lg",
+        "value": "1180px"
+      },
+      {
+        "name": "md",
+        "value": "980px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one primary action on a screen.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Explore our work</a>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; padding:14px 24px; border-radius:10px; background:#2453C4; color:#fff; font:500 .95rem/1 Inter,system-ui,sans-serif; text-decoration:none; box-shadow:0 1px 2px rgba(22,24,29,.16); transition:background-color .2s cubic-bezier(.2,.7,.2,1); } .ds-btn-primary:hover { background:#1B3F99; } .ds-btn-primary:active { transform:scale(.98); } .ds-btn-primary:focus-visible { outline:2px solid #2453C4; outline-offset:3px; }"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action beside the primary.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">Partner with DIC →</a>",
+      "css": ".ds-btn-line { display:inline-flex; align-items:center; gap:8px; padding:14px 24px; border-radius:10px; border:1px solid #D9D4C9; background:#fff; color:#16181D; font:500 .95rem/1 Inter,system-ui,sans-serif; text-decoration:none; transition:border-color .2s cubic-bezier(.2,.7,.2,1); } .ds-btn-line:hover { border-color:#16181D; } .ds-btn-line:focus-visible { outline:2px solid #2453C4; outline-offset:3px; }"
+    },
+    {
+      "name": "Navigation Tray",
+      "kind": "nav",
+      "refersTo": "filter-pill",
+      "description": "Primary navigation in a hairline tray; the section in view is dark.",
+      "html": "<nav class=\"ds-nav\"><a class=\"on\" href=\"#\">About</a><a href=\"#\">Themes</a><a href=\"#\">Impact</a><a href=\"#\">Projects</a></nav>",
+      "css": ".ds-nav { display:inline-flex; gap:2px; padding:4px; border-radius:12px; background:#fff; border:1px solid #E7E3DB; } .ds-nav a { padding:8px 15px; border-radius:8px; color:#3A404B; font:500 .9rem/1.4 Inter,system-ui,sans-serif; text-decoration:none; transition:background-color .2s, color .2s; } .ds-nav a:hover { background:#F3F1EC; color:#16181D; } .ds-nav a.on { background:#16181D; color:#fff; } .ds-nav a:focus-visible { outline:2px solid #2453C4; outline-offset:2px; }"
+    },
+    {
+      "name": "Filter Pill",
+      "kind": "chip",
+      "refersTo": "filter-pill",
+      "description": "Theme and status filters with a count; 44px tall.",
+      "html": "<button class=\"ds-pill\" aria-pressed=\"false\">Medical Devices <i>25</i></button> <button class=\"ds-pill\" aria-pressed=\"true\">All work <i>47</i></button>",
+      "css": ".ds-pill { display:inline-flex; align-items:center; gap:9px; min-height:44px; padding:10px 17px; border-radius:8px; border:1px solid #D9D4C9; background:#fff; color:#3A404B; font:500 .88rem Inter,system-ui,sans-serif; cursor:pointer; transition:background-color .2s, color .2s, border-color .2s; } .ds-pill:hover { border-color:#16181D; color:#16181D; } .ds-pill[aria-pressed=\"true\"] { background:#16181D; border-color:#16181D; color:#fff; } .ds-pill i { font-style:normal; font-size:.8rem; opacity:.55; } .ds-pill:focus-visible { outline:2px solid #2453C4; outline-offset:2px; }"
+    },
+    {
+      "name": "Status Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Patent status; the only place sage and sand appear.",
+      "html": "<span class=\"ds-st ds-st-granted\">Granted</span> <span class=\"ds-st ds-st-published\">Published</span> <span class=\"ds-st ds-st-filed\">Filed</span> <span class=\"ds-st ds-st-proto\">Prototype</span>",
+      "css": ".ds-st { display:inline-block; padding:7px 14px; border-radius:6px; font:500 .8rem Inter,system-ui,sans-serif; white-space:nowrap; } .ds-st-granted { background:#E9F1E4; color:#2F5A25; } .ds-st-published { background:#E8EEFB; color:#1B3F99; } .ds-st-filed { background:#F5ECDF; color:#9A5B2E; } .ds-st-proto { background:#F3F1EC; color:#5B6371; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "Project tile: image, theme tag, serif title, summary; the bench tag shows until the image loads.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-img\"><span class=\"ds-tag\">No. 20</span></div><h3>Bionic Prosthetic Arm</h3><p>Patient specific 3D printed transradial arm, driven by EMG sensors.</p></article>",
+      "css": ".ds-card { width:320px; padding:12px; border-radius:24px; border:1px solid #E7E3DB; background:#fff; font-family:Inter,system-ui,sans-serif; } .ds-card-img { position:relative; aspect-ratio:4/3; border-radius:16px; background:#F3F1EC; overflow:hidden; } .ds-tag { position:absolute; left:16px; bottom:12px; font:400 .8rem \"IBM Plex Mono\",ui-monospace,Menlo,monospace; color:#5B6371; } .ds-card h3 { margin:18px 12px 8px; font:500 1.2rem/1.3 Fraunces,Georgia,serif; color:#16181D; letter-spacing:-.01em; } .ds-card p { margin:0 12px 12px; color:#5B6371; font-size:.88rem; line-height:1.65; } .ds-card:hover { border-color:#D9D4C9; }"
+    },
+    {
+      "name": "Stat Tile",
+      "kind": "card",
+      "refersTo": "stat-tile",
+      "description": "A big serif figure with a plain label; one tile per screen may use the blue wash.",
+      "html": "<div class=\"ds-stat ds-stat-accent\"><b>5,621</b><span>students trained in DIC courses</span></div> <div class=\"ds-stat\"><b>130</b><span>research publications</span></div>",
+      "css": ".ds-stat { display:inline-flex; flex-direction:column; gap:8px; min-width:220px; padding:28px 24px; border-radius:16px; background:#F3F1EC; color:#16181D; font-family:Inter,system-ui,sans-serif; } .ds-stat b { font:400 2.6rem/1 Fraunces,Georgia,serif; letter-spacing:-.02em; } .ds-stat span { font-size:.88rem; color:#3A404B; } .ds-stat-accent { background:#E8EEFB; } .ds-stat-accent b { color:#1B3F99; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Contact form field with the blue focus ring.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Full name</label><input class=\"ds-input\" id=\"ds-name\" value=\"Asha Verma\">",
+      "css": ".ds-label { display:block; margin-bottom:7px; font:500 .85rem Inter,system-ui,sans-serif; color:#16181D; } .ds-input { width:260px; padding:14px 16px; border-radius:12px; border:1px solid #D9D4C9; background:#FAF9F6; color:#16181D; font:400 .95rem Inter,system-ui,sans-serif; transition:border-color .2s, background-color .2s, box-shadow .2s; } .ds-input:focus { outline:none; border-color:#2453C4; background:#fff; box-shadow:0 0 0 4px rgba(36,83,196,.12); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Prototype Bench",
+    "overview": "A university workshop that ships to the hospital. The surface is warm paper, the headlines are set in a human serif, and the one saturated colour is a working blue that appears only where something can be done or chosen. Everything else is a step of warm neutral held apart by hairlines.\n\nThe site persuades by proof, so the system stays quiet and lets objects and numbers lead: the bionic arm, the workshop photograph, big serif figures with plain labels, and catalogue and patent numbers set in a mono face like tags on a bench. It should read as credible, precise, warm and ambitious to an industry or clinical partner deciding whether to start a conversation.",
+    "keyCharacteristics": [
+      "Warm neutral paper surfaces with hairline borders, never pure grey or a white page.",
+      "One accent, Working Blue, used rarely; status colours (sage, sand) appear only in patent chips.",
+      "Fraunces for headlines and big figures, Inter for everything read or clicked, IBM Plex Mono for catalogue and patent numbers.",
+      "Quiet, exact components: radius by size, colour change on hover, no lift, glow or gradient.",
+      "Flat at rest; shadow only on the selected tab, the contact form and the detail drawer."
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Rule",
+        "body": "Working Blue marks the primary action, the selection, and at most one key figure per screen. It never fills a surface larger than a stat tile.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Paper Rule",
+        "body": "Every surface is a step of the warm neutral ramp (Warm Paper, Soft Paper, Card White). No cool greys and no pure-white page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Weights Rule",
+        "body": "Type uses weights 400 and 500 only. Hierarchy comes from size, family and colour, never from bold.",
+        "section": "typography"
+      },
+      {
+        "name": "The Bench Tag Rule",
+        "body": "Catalogue numbers (\"No. 20\") and patent numbers are set in IBM Plex Mono at 12.8px; they are the one signature detail.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Surfaces are flat at rest and separated by hairlines. Shadow appears only on the selected theme tab, the contact form and the detail drawer.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Radius By Size Rule",
+        "body": "Radius follows size: 6px chips, 8px pills and nav links, 10px buttons, 12px fields and the nav tray, 16px tiles, 24px cards and panels. Only icon buttons and step numbers are circles.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep text at 4.5:1 or better: Muted Slate (#5B6371) is the lightest text colour on any surface.",
+      "Do size tap targets at 44px (filter pills, burger, inline links padded to 44px).",
+      "Do write labels in sentence case at 12.8px with no tracking.",
+      "Do put proof before prose: big Fraunces figures with a plain Inter label.",
+      "Do give hover a colour or border change only, and keep a visible 2px Working Blue focus ring.",
+      "Do keep spacing on the 4px grid and sections at clamp(80px, 9vw, 136px) vertical padding."
+    ],
+    "donts": [
+      "Don't add gradients, glows, coloured shadows, blurred backdrops, emoji or decorative icons.",
+      "Don't use uppercase tracked labels or italic for emphasis; emphasis in a headline is Working Blue colour only.",
+      "Don't introduce a second accent hue; sage and sand exist only for patent status chips.",
+      "Don't lift, scale or animate layout properties on hover; no looping motion.",
+      "Don't add claims, numbers or testimonials the owner has not confirmed (see PRODUCT.md)."
+    ]
+  }
+}
